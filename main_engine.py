@@ -7,10 +7,13 @@ from src.ranking_engine import rank_machines
 def run_pipeline(file):
 
     df = parse_excel(file)
-    df = parse_excel(file)
 
+    print("Parsed data:")
     print(df)
     df = calculate_features(df)
+
+    print("\nAfter feature engineering:")
+    print(df)
 
     metrics = [
         "sec",
